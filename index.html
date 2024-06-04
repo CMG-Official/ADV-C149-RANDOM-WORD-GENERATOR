@@ -1,0 +1,76 @@
+
+<html>
+<head>
+  <title>ADV-C149: RANDOM WORD GENERATOR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Skranji&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<center>
+<h1 class="titl">ADV-C149: RANDOM WORD GENERATOR</h1>
+<br>
+<br>
+<br>
+    <video width="400" controls>
+        <source src="vid.mp4" muted="muted" type="video/mp4">
+    </video>
+    <br>
+    <br>
+    <br>
+    <pre>
+      <code>
+          from tkinter import *
+          from tkmacosx import *
+          import random
+
+          root = Tk()
+          root.title("Random Thing")
+          root.geometry("500x500")
+          root.configure(background = 'yellow')
+
+          label1 = Label(root)
+
+          def generate_random():
+              list1 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', '|', ':', ';', '"', ',', '.', '?', '/']
+              random_no1 = random.randint(53, 63)
+              random_no2 = random.randint(27, 52)
+              random_no3 = random.randint(1, 26)
+              random_no4 = random.randint(64, 94)
+              random_no5 = random.randint(64, 94)
+
+              random_alpha1 = list1[random_no1]
+              random_alpha2 = list1[random_no2]
+              random_alpha3 = list1[random_no3]
+              random_alpha4 = list1[random_no4]
+              random_alpha5 = list1[random_no5]
+
+              label1["text"] = random_alpha1 + random_alpha2 + random_alpha3 + random_alpha4 + random_alpha5
+
+          btn = Button(root, text = "Generated Random Thing", command = generate_random, bg = "Red", fg = "white")
+          btn.place(relx = 0.5, rely = 0.4, anchor = CENTER)
+          label1.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+
+          root.mainloop()
+      </code>
+    </pre>
+    
+<div class="contn">
+
+</div>
+</center>
+<div class="copyright_footer"> Devloped By : Tejas</div>
+</body>
+<script src="main.js"></script>
+</html>
+
+
